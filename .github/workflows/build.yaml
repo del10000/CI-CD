@@ -41,12 +41,12 @@ jobs:
           build: npm run build
           start: npm run start
           browser: ${{ matrix.browser }}
-      - uses: action/upload-artifact@v3
+      - uses: actions/upload-artifact@v3
         if: always()
         with:
           name: cypress-videos
           path: cypress/videos
-      - uses: action/upload-artifact@v3
+      - uses: actions/upload-artifact@v3
         if: failure()
         with:
           name: cypress-screenshots
