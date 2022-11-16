@@ -31,7 +31,7 @@ jobs:
         uses: action/cache@v3
         with:
           path: node_modules
-          key: ${{ runner.os }}-nodes_modules-${{ hashFiles(package-lock.json') }}
+          key: ${{ runner.os }}-node_modules-${{ hashFiles('package-lock.json') }}
       - run: la -lah
       - name: Cypress run
         uses: cypress-io/github-action@v4.2.0 # use the explicit version number
