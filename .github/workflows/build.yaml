@@ -37,3 +37,11 @@ jobs:
         with:
           build: npm run build
           start: npm run start
+      - uses: action/upload-artifact@v3
+        with:
+          name: cypress-videos
+          path: cypress/videos
+      - uses: action/upload-artifact@v3
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots
