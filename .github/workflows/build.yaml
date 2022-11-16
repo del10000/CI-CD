@@ -9,7 +9,7 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: '14'
+          node-version: "14"
 
       - name: Cache node_modules
         id: cache-node_modules
@@ -32,7 +32,7 @@ jobs:
         with:
           path: node_modules
           key: ${{ runner.os }}-nodes_modules-${{ hashFiles(package-lock.json') }}
-        - run: la -lah
+      - run: la -lah
       - name: Cypress run
         uses: cypress-io/github-action@v4.2.0 # use the explicit version number
         with:
